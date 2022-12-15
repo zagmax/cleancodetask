@@ -30,16 +30,17 @@ public class Airport {
     }
 
     public List<MilitaryPlane> getTransportMilitaryPlanes() {
-        return getMilitaryPlanes().stream().filter(planes -> planes.getType()==MilitaryType.TRANSPORT).collect(Collectors.toList());
+        return getMilitaryPlanes().stream().filter(planes -> planes.getType() == MilitaryType.TRANSPORT).collect(Collectors.toList());
     }
 
     public List<MilitaryPlane> getBomberMilitaryPlanes() {
-        return getMilitaryPlanes().stream().filter(planes -> planes.getType()==MilitaryType.BOMBER).collect(Collectors.toList());
+        return getMilitaryPlanes().stream().filter(planes -> planes.getType() == MilitaryType.BOMBER).collect(Collectors.toList());
     }
 
     public List<experimentalPlane> getExperimentalPlanes() {
         return (List<experimentalPlane>) planes.stream().filter(planes -> planes instanceof experimentalPlane).collect(Collectors.toList());
     }
+
     public Airport sortPlanesByMaxFlightDistance() {
         planes.sort(Comparator.comparingInt((Plane planes) -> planes.getMaxFlightDistance()));
         return this;
@@ -57,6 +58,7 @@ public class Airport {
     public List<? extends Plane> getPlanes() {
         return planes;
     }
+
     @Override
     public String toString() {
         return "Airport{" +
