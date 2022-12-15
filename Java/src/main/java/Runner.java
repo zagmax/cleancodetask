@@ -32,9 +32,9 @@ public class Runner {
         Airport airport = new Airport(planes);
         Airport militaryAirport = new Airport(airport.getMilitaryPlanes());
         Airport passengerAirport = new Airport(airport.getPassengerPlanesList());
-        logger.info("Military airport sorted by max distance: " + militaryAirport.sortByMaxDistance().toString());
-        logger.info("Military airport sorted by max distance: " + militaryAirport.sortByMaxDistance().toString());
-        logger.info("Passenger airport sorted by max speed: " + passengerAirport.sortByMaxSpeed().toString());
+        logger.info("Military airport sorted by max distance: " + militaryAirport.sortPlanesByMaxFlightDistance().toString());
+        logger.info("Military airport sorted by max distance: " + militaryAirport.sortPlanesByMaxFlightDistance().toString());
+        logger.info("Passenger airport sorted by max speed: " + passengerAirport.sortPlanesByMaxSpeed().toString());
         logger.info("Plane with max passenger capacity: " + passengerAirport.getMaxPassengersCapacityPassengerPlane());
     }
 }
